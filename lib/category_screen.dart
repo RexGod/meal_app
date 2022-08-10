@@ -7,15 +7,18 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('MealApp')),
-      body: GridView(
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 210,
-              childAspectRatio: 1.5,
-              crossAxisSpacing: 30,
-              mainAxisSpacing: 20),
-          children: DUMMY_CATEGORIES.map((item) {
-            return CategoryItem(item.color, item.title);
-          }).toList()),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: GridView(
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 210,
+                childAspectRatio: 1.3,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 30),
+            children: DUMMY_CATEGORIES.map((item) {
+              return CategoryItem(item.color, item.title);
+            }).toList()),
+      ),
     );
   }
 }
