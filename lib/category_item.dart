@@ -11,15 +11,14 @@ class CategoryItem extends StatelessWidget {
     this.id,
   );
 
-  void select(BuildContext contxt) {
-    Navigator.of(contxt)
-        .push(MaterialPageRoute(builder: (_) => CategoryMealScreen(id, title)));
+  void transfer(BuildContext contxt) {
+    Navigator.of(contxt).pushNamed('/category-meal-screen', arguments: {'id': id , 'title': title});
   }
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => select(context),
+    return InkWell(
+      onTap: () => transfer(context),
       child: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
