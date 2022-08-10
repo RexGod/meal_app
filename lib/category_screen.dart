@@ -3,6 +3,7 @@ import './category_item.dart';
 import './158 dummy_data.dart';
 
 class CategoryScreen extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +17,7 @@ class CategoryScreen extends StatelessWidget {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 30),
             children: DUMMY_CATEGORIES.map((item) {
-              return CategoryItem(item.color, item.title);
+              return CategoryItem(item.color, item.title , item.id);
             }).toList()),
       ),
     );
