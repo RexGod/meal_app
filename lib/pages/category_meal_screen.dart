@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '166 dummy_data.dart';
+import '../data/166 dummy_data.dart';
 
 // ignore: use_key_in_widget_constructors
 class CategoryMealScreen extends StatelessWidget {
