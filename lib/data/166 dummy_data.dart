@@ -1,8 +1,11 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:flutter/material.dart';
 
 import '../model/category.dart';
 import '../model/meal.dart';
 
+// ignore: constant_identifier_names
 const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
