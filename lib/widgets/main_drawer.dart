@@ -17,7 +17,7 @@ class MainDrawer extends StatelessWidget {
         ),
       ),
       onTap: () {
-        onTapHandler;
+        onTapHandler();
       },
     );
   }
