@@ -27,12 +27,12 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => TabsScreen(),
         CategoryMealScreen.routName: (context) => CategoryMealScreen(),
-        MealDetailsScreen.routName: ((context) => MealDetailsScreen()),
+        MealDetailsScreen.routName: (context) => MealDetailsScreen(),
         FiltersScreen.routName: (context) => FiltersScreen(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (ctx) => CategoryScreen(),
+          builder: (context) => CategoryScreen(),
         );
       },
     );
