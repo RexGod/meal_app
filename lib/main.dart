@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
         if (_filters['vegan'] as bool && !element.isVegan) {
           return false;
         }
-        if (_filters['vegetarian'] as bool && !element.isVegetarian) {
+        if (_filters['vegeterian'] as bool && !element.isVegetarian) {
           return false;
         }
         return true;
@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
         CategoryMealScreen.routName: (context) =>
             CategoryMealScreen(_availbleMeals),
         MealDetailsScreen.routName: (context) => MealDetailsScreen(),
-        FiltersScreen.routName: (context) => FiltersScreen(_setFilters),
+        FiltersScreen.routName: (context) => FiltersScreen(_filters,_setFilters),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
